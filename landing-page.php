@@ -3,8 +3,6 @@
 	/*
 		UserPie Version: 1.0 Updated by: Kenyer Domínguez
 		http://usercake.com
-		
-
 	*/
 	
 ?>	
@@ -18,6 +16,7 @@
 
 
 
+
 </head>
 <body>
 <?php require_once("navbar.php"); ?>
@@ -26,7 +25,7 @@
 	<div id="content">
 		
 		<p style="text-align:center">      
-		<h2><center><?php echo $websiteName; ?> </center></h2>
+		<h3><center><?php echo $websiteName; ?> </center></h3>
 		</p>
 
 
@@ -73,12 +72,18 @@ $(function() {
 
 -->
 
+<?php include("fullcalendar/calendar.php"); ?>
             
             <hr>
-<p style="text-align:center">           
-	<a class="btn btn-large" href="login.php"><?php echo lang("LOGIN"); ?></a> 
-<a class="btn-danger btn btn-large" href="register.php"><?php echo lang("SIGN_UP"); ?></a></p>
-                <br>
+			<p style="text-align:center">           
+				<a class="btn btn-large" href="login.php">
+					<?php echo lang("LOGIN"); ?>
+				</a> 
+				<a class="btn-danger btn btn-large" href="register.php">
+					<?php echo lang("SIGN_UP"); ?>
+				</a>
+			</p>
+            <br>
                 
 <p style="text-align:center">
 	<a href="forgot-password.php"><?php echo lang("FORGOT_PASSWORD"); ?></a> | 

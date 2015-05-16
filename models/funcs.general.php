@@ -155,11 +155,12 @@ function parseLength($len) {
 	"wk" => 604800,
 	"mo" => 2592000);
 	if(!array_key_exists($user_units, $units))
-	die("Invalid unit of time.");
-	else if(!is_numeric($user_time))
-	die("Invalid length of time.");
-	else
-	return (int)$user_time*$units[$user_units];
+		die("Invalid unit of time.");
+	else 
+		if(!is_numeric($user_time))
+			die("Invalid length of time.");
+		else
+			return (int)$user_time*$units[$user_units];
 }
 
 ?>

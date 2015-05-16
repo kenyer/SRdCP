@@ -22,7 +22,7 @@
 	
 	//Generic website variables
 	//$websiteName = "Sistema de Reservas de la Casa del Profesor - APUSB";
-	$websiteName = "SRdCP";
+	$websiteName = "Sistema de Reservas de la Casa del Profesor";
 	$websiteUrl = "http://localhost/UserPie-master/"; //including trailing slash
 
 	//Do you wish UserPie to send out emails for confirmation of registration?

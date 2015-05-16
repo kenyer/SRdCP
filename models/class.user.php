@@ -56,8 +56,8 @@ class loggedInUser {
 		$secure_pass = generateHash($pass);
 		
 		$this->hash_pw = $secure_pass;
-if($this->remember_me == 1)
-updateSessionObj();
+		if($this->remember_me == 1)
+			updateSessionObj();
 		
 		$sql = "UPDATE ".$db_table_prefix."users
 		       SET
@@ -74,8 +74,8 @@ updateSessionObj();
 		global $db,$db_table_prefix;
 		
 		$this->email = $email;
-if($this->remember_me == 1)
-updateSessionObj();
+		if($this->remember_me == 1)
+			updateSessionObj();
 		
 		$sql = "UPDATE ".$db_table_prefix."users
 				SET email = '".$email."'
