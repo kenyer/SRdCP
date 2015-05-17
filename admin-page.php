@@ -1,11 +1,7 @@
 <?php 
-
-
 	/*
 		UserPie Version: 1.0 Updated by: Kenyer Domínguez
 		http://userpie.com
-		
-
 	*/
 	require_once("models/config.php");
 
@@ -19,9 +15,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo $websiteName; ?> </title>
 <?php require_once("head_inc.php"); ?>
-
-
-
 </head>
 <body>
 <?php require_once("navbar.php"); ?>

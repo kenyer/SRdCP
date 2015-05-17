@@ -142,22 +142,27 @@ function updateSessionObj()
 	$db->sql_query("UPDATE ".$db_table_prefix."sessions SET session_data = '".$newObj."' WHERE session_id = '".$loggedInUser->remember_me_sessid."'");
 }
 
+//Esta función devuelve solo los eventos posteriores a la fecha actual
+//Genera el json que necesita el FullCalendar para mostrarlo correctamente
+//El color depende del status y el tipo del evento
+
+
 function get_events()
 {
 	global $loggedInUser,$db,$db_table_prefix;
-	$sql="SELECT start, end, nombre as title, status as color, tipo FROM event ";
+	$sql="SELECT start, end, nombre as title, status as color, tipo FROM event WHERE month(start) >= month(curdate())";
 	$result = $db->sql_query($sql);
 	$rows=array();
 	while($row=$db->sql_fetchrow($result)){
 		if ($row["color"]==8){ 		//solicitud aprobada totalmente
-			if ($row["tipo"]==1){ 	//fecha reservada fija. Ej. Feriado
+			if ($row["tipo"]==1){ 	//tipo 1 = fecha reservada fija. Ej. Feriado
 				$row["color"]="null";
 			}else{
 				$row["color"]="#E63B41";
 				$row["title"]="Reservada";
 			}
 		}else{
-			if ($row["tipo"]<>1){ 	//fecha reservada fija. Ej. Feriado
+			if ($row["tipo"]<>1){ 	//tipo 1 = fecha reservada fija. Ej. Feriado
 				$row["color"]="#257e4a";
 				$row["title"]="En revisión";
 			}

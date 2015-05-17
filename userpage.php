@@ -28,15 +28,6 @@
         	<p>Welcome to your account page <strong><?php echo $loggedInUser->display_username; ?></strong></p>
 
             <p>You are a <strong><?php  $group = $loggedInUser->groupID(); echo $group['group_name']; ?></strong></p>
-            <?php 
-            
-            echo isUserAdmin()." ";
-            
-            if (isUserAdmin())
-				echo "SI";
-			else
-				echo "NO";
-			?>
             
             <p>You joined on <?php echo date("l \\t\h\e jS Y",$loggedInUser->signupTimeStamp()); ?> </p>
 

@@ -15,7 +15,8 @@
 		Below is a very simple example of how to process a new user.
 		 Some simple validation (ideally more is needed).
 		
-		The first goal is to check for empty / null data, to reduce workload here we let the user class perform it's own internal checks, just in case they are missed.
+		The first goal is to check for empty / null data, to reduce workload here we let the user class perform it's own internal checks, 
+		just in case they are missed.
 	*/
 
 //Forms posted

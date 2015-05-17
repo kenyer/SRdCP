@@ -26,62 +26,6 @@
 			
 			events: 
 				<?=get_events();?>			
-			//[
-				//{
-					//title: 'Día del trabajador',
-					//start: '2015-05-01'
-				//},
-				//{
-					//title: 'En Revisión',
-					////start: '2015-02-13T11:00:00', //asi se le puede colocar la hora
-					//start: '2015-05-13',
-					////constraint: 'Bloqueada', // defined below
-					//color: '#257e4a'
-				//},
-				//{
-					//title: 'Ocupada',
-					////start: '2015-02-13T11:00:00', //asi se le puede colocar la hora
-					//start: '2015-05-14',
-					////constraint: 'Bloqueada', // defined below
-					//color: '#E63B41'
-				//},				
-				//{
-					//title: 'Semana santa',
-					//start: '2015-05-18',
-					//end: '2015-05-23'
-				//},
-		
-
-				//// areas where "Meeting" must be dropped
-				////{
-					////id: 'availableForMeeting',
-					////start: '2015-02-11T10:00:00',
-					////end: '2015-02-11T16:00:00',
-					////rendering: 'background'
-				////},
-				////{
-					////id: 'availableForMeeting',
-					////start: '2015-02-13T10:00:00',
-					////end: '2015-02-13T16:00:00',
-					////rendering: 'background'
-				////},
-
-				//// red areas where no events can be dropped
-				////{
-					////start: '2015-05-24',
-					////end: '2015-05-28',
-					////overlap: false,
-					////rendering: 'background',
-					////color: '#ff9f89'
-				////},
-				////{
-					////start: '2015-05-06',
-					////end: '2015-05-08',
-					////overlap: false,
-					////rendering: 'background',
-					////color: '#ff9f89'
-				////}
-			//]
 		});
 		
 	});
