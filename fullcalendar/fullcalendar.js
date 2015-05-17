@@ -926,7 +926,6 @@ newMomentProto.clone = function() {
 	return mom;
 };
 
-
 // Week Number
 // -------------------------------------------------------------------------------------------------
 
@@ -6691,9 +6690,9 @@ var View = fc.View = Class.extend({
 
 	// Computes the new date when the user hits the prev button, given the current date
 	computePrevDate: function(date) {
-		return this.massageCurrentDate(
-			date.clone().startOf(this.intervalUnit).subtract(this.intervalDuration), -1
-		);
+			return this.massageCurrentDate(
+				date.clone().startOf(this.intervalUnit).subtract(this.intervalDuration), -1
+			);
 	},
 
 
@@ -8001,6 +8000,14 @@ function Calendar_constructor(element, overrides) {
 		}
 
 		unfreezeContentHeight(); // undo any lone freezeContentHeight calls
+		
+		var lammCurrentDate = new Date();
+		var lammMinDate = new Date( lammCurrentDate.getFullYear(), lammCurrentDate.getMonth(), 1, 0, 0, 0, 0);
+		if (currentView.start <= lammMinDate){
+			header.disableButton('prev');
+		} else {
+			header.enableButton('prev');
+		}
 		ignoreWindowResize--;
 	}
 

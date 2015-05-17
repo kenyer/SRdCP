@@ -1,8 +1,7 @@
 <?php
 /*
-	UserPie Version: 1.0
+	UserPie Version: 1.0 Updated by: Kenyer Domínguez
 	http://userpie.com
-	
 */
 
 class loggedInUser {

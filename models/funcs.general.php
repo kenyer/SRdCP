@@ -2,8 +2,6 @@
 	/*
 		UserPie Version: 1.0 Updated by: Kenyer Domínguez
 		http://userpie.com
-		
-
 	*/
 	
 	function sanitize($str)
@@ -95,6 +93,7 @@
 			}
 		}
 		
+		
 		//Ensure we have something to return
 		if($str == "")
 		{
@@ -141,6 +140,33 @@ function updateSessionObj()
 
 	$newObj = serialize($loggedInUser);
 	$db->sql_query("UPDATE ".$db_table_prefix."sessions SET session_data = '".$newObj."' WHERE session_id = '".$loggedInUser->remember_me_sessid."'");
+}
+
+function get_events()
+{
+	global $loggedInUser,$db,$db_table_prefix;
+	$sql="SELECT start, end, nombre as title, status as color, tipo FROM event ";
+	$result = $db->sql_query($sql);
+	$rows=array();
+	while($row=$db->sql_fetchrow($result)){
+		if ($row["color"]==8){ 		//solicitud aprobada totalmente
+			if ($row["tipo"]==1){ 	//fecha reservada fija. Ej. Feriado
+				$row["color"]="null";
+			}else{
+				$row["color"]="#E63B41";
+				$row["title"]="Reservada";
+			}
+		}else{
+			if ($row["tipo"]<>1){ 	//fecha reservada fija. Ej. Feriado
+				$row["color"]="#257e4a";
+				$row["title"]="En revisión";
+			}
+		}
+			
+		array_push($rows, $row);
+	}
+	$rows=json_encode($rows);
+	return($rows);
 }
 
 // Remember-Me Hack v0.03
