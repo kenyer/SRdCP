@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 16, 2015 at 08:30 PM
+-- Generation Time: May 17, 2015 at 04:56 PM
 -- Server version: 5.6.24-0ubuntu2
 -- PHP Version: 5.6.4-4ubuntu6
 
@@ -44,10 +44,10 @@ CREATE TABLE IF NOT EXISTS `event` (
 --
 
 INSERT INTO `event` (`id`, `start`, `end`, `status`, `solicitante`, `tipo`, `nombre`) VALUES
-(1, '2015-06-01', NULL, 8, 2, 1, 'Día del trabajador'),
-(2, '2015-06-13', NULL, 1, 1, 6, 'Solicitud'),
-(3, '2015-06-14', NULL, 8, 1, 2, 'Solicitud'),
-(4, '2015-06-18', '2015-06-23', 8, 2, 1, 'Semana Santa');
+(1, '2015-05-01', NULL, 8, 2, 1, 'Día del trabajador'),
+(2, '2015-05-13', NULL, 1, 1, 6, 'Solicitud'),
+(3, '2015-05-14', NULL, 8, 1, 2, 'Solicitud'),
+(4, '2015-05-18', '2015-05-23', 8, 2, 1, 'Semana Santa');
 
 -- --------------------------------------------------------
 
@@ -161,8 +161,8 @@ CREATE TABLE IF NOT EXISTS `userpie_users` (
 --
 
 INSERT INTO `userpie_users` (`user_id`, `username`, `username_clean`, `password`, `email`, `activationtoken`, `last_activation_request`, `LostpasswordRequest`, `active`, `group_id`, `sign_up_date`, `last_sign_in`) VALUES
-(1, 'kenyer', 'kenyer', '9d6aab9238ad2bf28f9f52f712eba82e4a5a75f24c9bfe82fa01b5389cbc8412f', 'kenyer@gmail.com', 'f88d7fea3d7419132a610c3ada4d830b', 1430686758, 0, 1, 1, 1430686758, 1430699516),
-(2, 'admin', 'admin', '60db112e29a208151cc770d258863ed68fdbc9266cda49f0c2fee57224934666d', 'admin@admin.com', '90baf93f86e7a5167ddec5a21fee8185', 1430696382, 0, 1, 2, 1430696382, 1430699417);
+(1, 'kenyer', 'kenyer', '9d6aab9238ad2bf28f9f52f712eba82e4a5a75f24c9bfe82fa01b5389cbc8412f', 'kenyer@gmail.com', 'f88d7fea3d7419132a610c3ada4d830b', 1430686758, 0, 1, 1, 1430686758, 1431897527),
+(2, 'admin', 'admin', 'be0b6db6f15c9cdbba404d5781c9b46074948ccedfb78479cc39dbf6c6026d606', 'admin@admin.com', '90baf93f86e7a5167ddec5a21fee8185', 1430696382, 0, 1, 2, 1430696382, 1431897696);
 
 --
 -- Indexes for dumped tables
