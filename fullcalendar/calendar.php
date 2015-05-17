@@ -31,20 +31,20 @@
 					title: 'En Revisión',
 					//start: '2015-02-13T11:00:00', //asi se le puede colocar la hora
 					start: '2015-05-13',
-					constraint: 'Bloqueada', // defined below
+					//constraint: 'Bloqueada', // defined below
 					color: '#257e4a'
 				},
 				{
 					title: 'Ocupada',
 					//start: '2015-02-13T11:00:00', //asi se le puede colocar la hora
 					start: '2015-05-14',
-					constraint: 'Bloqueada', // defined below
+					//constraint: 'Bloqueada', // defined below
 					color: '#E63B41'
 				},				
 				{
 					title: 'Semana santa',
 					start: '2015-05-18',
-					end: '2015-05-20'
+					end: '2015-05-23'
 				},
 		
 
@@ -89,7 +89,7 @@
 		margin: 40px 10px;
 		padding: 0;
 		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
-		font-size: 14px;
+		font-size: 11px;
 	}
 
 	#calendar {
