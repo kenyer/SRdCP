@@ -14,7 +14,7 @@
 	$db_host = "localhost";
 	$db_user = "root";
 	$db_pass = "Segundo!!";
-	$db_name = "borrar-um1";
+	$db_name = "reservas";
 	$db_port = "";
 	$db_table_prefix = "userpie_";
 
@@ -23,7 +23,7 @@
 	//Generic website variables
 	//$websiteName = "Sistema de Reservas de la Casa del Profesor - APUSB";
 	$websiteName = "Sistema de Reservas de la Casa del Profesor";
-	$websiteUrl = "http://localhost/UserPie-master/"; //including trailing slash
+	$websiteUrl = "http://localhost/reservas/"; //including trailing slash
 
 	//Do you wish UserPie to send out emails for confirmation of registration?
 	//We recommend this be set to true to prevent spam bots.

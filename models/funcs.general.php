@@ -142,15 +142,30 @@ function updateSessionObj()
 	$db->sql_query("UPDATE ".$db_table_prefix."sessions SET session_data = '".$newObj."' WHERE session_id = '".$loggedInUser->remember_me_sessid."'");
 }
 
+//Esta función devuelve todos los tipos de eventos almacenados en la tabla event_type
+//El formato de salida es <option value=id>name</option> dado que es para un select en el crear solicitud
+
+
+function get_event_type(){
+	global $db;
+	$sql="SELECT * FROM event_type ORDER BY name";
+	$result = $db->sql_query($sql);
+	$option="";
+	while($row=$db->sql_fetchrow($result)){
+		$option.="<option value='".$row['id']."'>".$row['name']."</option>";			
+	}
+	return($option);
+}
+
 //Esta función devuelve solo los eventos posteriores a la fecha actual
-//Genera el json que necesita el FullCalendar para mostrarlo correctamente
-//El color depende del status y el tipo del evento
+//El formato de salida es json dado que así lo necesita FullCalendar para mostrarlo correctamente
+//El atributo color depende del status y el tipo del evento
 
 
 function get_events()
 {
-	global $loggedInUser,$db,$db_table_prefix;
-	$sql="SELECT start, end, nombre as title, status as color, tipo FROM event WHERE month(start) >= month(curdate())";
+	global $db;
+	$sql="SELECT start, end, descripcion as title, status as color, tipo FROM event WHERE month(start) >= month(curdate())";
 	$result = $db->sql_query($sql);
 	$rows=array();
 	while($row=$db->sql_fetchrow($result)){

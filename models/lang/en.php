@@ -67,6 +67,7 @@
 		"SIGN_UP"								=> "Sign Up",
 		"USERNAME"								=> "Username",
 		"PASSWORD"								=> "Password",
+		"ACTUAL_PASSWORD"						=> "Actual Password",
 		"NEW_PASSWORD"							=> "New Pass",
 		"CONFIRM_PASSWORD"						=> "Confirm Pass",
 		"RESEND_ACTIVATION_EMAIL"				=> "Resend Activation email",

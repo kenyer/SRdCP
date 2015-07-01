@@ -107,7 +107,7 @@ if(!empty($_POST))
             <form name="changePass" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
             
                 <p>
-                    <label><?php echo lang("PASSWORD"); ?>:</label>
+                    <label><?php echo lang("ACTUAL_PASSWORD"); ?>:</label>
                     <input type="password" name="password" />
                 </p>
                 

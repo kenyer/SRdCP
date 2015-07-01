@@ -67,6 +67,7 @@
 		"SIGN_UP"								=> "Registrarse",
 		"USERNAME"								=> "Nombre de usuario",
 		"PASSWORD"								=> "Contraseña",
+		"ACTUAL_PASSWORD"						=> "Contraseña Actual",
 		"NEW_PASSWORD"							=> "Contraseña nueva",
 		"CONFIRM_PASSWORD"						=> "Confirmar contraseña",
 		"RESEND_ACTIVATION_EMAIL"				=> "Reenviar activación de cuenta",
