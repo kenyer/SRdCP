@@ -6,7 +6,7 @@
 	require_once("models/config.php");
 	
 	//Prevent the user visiting the logged in page if he/she is already logged in
-	if(isUserLoggedIn()) { header("Location: index.php"); die(); }
+		if (!isset($loggedInUser)) header('Location: login.php');
 ?>
 
 
@@ -98,7 +98,7 @@ if(!empty($_POST))
 
 <div class="modal-ish">
 	<div class="modal-header">
-		<h2><?php echo lang("SIGN_UP"); ?></h2>
+		<h2><?php echo "Crear Solicitud" ?></h2>
 	</div>
 	  <div class="modal-body">
 				<div id="success">
@@ -119,19 +119,21 @@ if(!empty($_POST))
 						<input type="text" name="username" /></label>
 				 
 						<label>Tipo:
-						<select name="event-type">
-							<option value"0">--Seleccione--</option>
-							<?=get_event_types();?>		
-						</select> </label>
+							<select name="event-type">
+								<option value"0">--Seleccione--</option>
+								<?=get_event_types();?>		
+							</select> 
+						</label>
 						
-						<hr> <small>Solo para miembros USB</small>
+						<hr> <small><center>Solo para miembros USB</center></small>
 						<label><?php echo lang("DEPARTMENT"); ?>:
-						<select name="dpto">
-							<option value"0">--Seleccione--</option>
-							<option value"1">Esto debería ser una tabla en la BD</option>
-							<option value"2">Computación</option>
-							<option value"3">Procesos y Sistemas</option></label>
-						</select> 				
+							<select name="dpto">
+								<option value"0">--Seleccione--</option>
+								<option value"1">Esto debería ser una tabla en la BD</option>
+								<option value"2">Computación</option>
+								<option value"3">Procesos y Sistemas</option>
+							</select> 				
+						</label>
 
 						<label>Extensión:
 						<input type="text" name="extension" />	</label>		
@@ -139,7 +141,7 @@ if(!empty($_POST))
 						<label>Correo USB:
 						<input type="text" name="usb-email" />	</label>	
 
-						<hr> <small>Solo para referidos</small>
+						<hr> <small><center>Solo para referidos</center></small>
 						<label>Correo USB del referido:
 						<input type="text" name="usb-email-referido" />	</label>
 
@@ -151,7 +153,7 @@ if(!empty($_POST))
 							<option value"3">Hermano(a)</option>
 						</select> 	</label>
 						
-						<hr> <small>Solo para usuarios del tipo "Otro"</small>
+						<hr> <small><center>Solo para usuarios del tipo "Otro"</center></small>
 						<label>¿Cómo se enteró de este servicio?:
 						<input type="text" name="fuente" />	</label>					
 		

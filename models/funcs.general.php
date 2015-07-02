@@ -146,7 +146,7 @@ function updateSessionObj()
 //El formato de salida es <option value=id>name</option> dado que es para un select en el crear solicitud
 
 
-function get_event_type(){
+function get_event_types(){
 	global $db;
 	$sql="SELECT * FROM event_type ORDER BY name";
 	$result = $db->sql_query($sql);

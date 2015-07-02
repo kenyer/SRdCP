@@ -1,0 +1,6 @@
+PENDIENTES
+- Actualizar perfil debería tener no solo el cambiar correo sino nombre, apellido y nombre de usuario
+- Traducir el Bienvenido en navbar
+- En los formularios hay que poner un poco más de padding a los campos
+- Traducir Crear Solicitud en crear-solicitud.php
+- Colocar un datepicket en los campos de Fecha de inicio y fecha fin en crear-solicitud.php, incluso que esos datepicker muestren solo los días disponibles usando el fullcalendar
