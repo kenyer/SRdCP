@@ -1,0 +1,71 @@
+COMO HACER UNA RESERVA EN LA CASA DEL PROFESOR
+
+Se entra en la página de la Casa del Profesor. 
+Sin necesidad de iniciar sesión se puede revisar:
+
+LISTO 1) Disponibilidad de fecha de los espacios (podría ser un calendario con los días ocupados marcados).
+
+2) Fotos de los espacios disponibles, con su capacidad, y de los servicios de festejos de la concesionaria, pero sin costos. 
+
+De estar interesado y estar disponible la fecha, debe registrarse (únicamente un login y un 
+password) e iniciar sesión; habrá dos formas de registro, una para profesores y otra para personas 
+externas a la USB (incluyendo compañías).
+
+Si se registra como profesor, se necesitan los siguientes datos:
+Departamento
+Número de celular
+Extensión
+Tipo de evento
+Fecha del evento
+Número de asistentes
+Área que desea alquilar
+
+Si se registra como externo (persona natural o jurídica), se necesitan los siguientes datos:
+Nombre/Compañía
+Número de celuLar
+Tipo de evento
+Fecha del evento
+Número de asistentes
+Área que desea alquilar
+
+En cada una de estas páginas deben aparecer los links al reglamento de alquiler, a los costos de 
+alquiler, de la fianza y las condiciones de pago, y a la información de la agencia de festejos. FALTA 
+ANEXAR ESTA INFORMACIÓN. ADEMÁS, DEBE APARECER BIEN CLARO QUE LOS COSTOS DE LOS
+ALQUILERES Y DE LA FIANZA PUEDEN CAMBIAR PARA EL MOMENTO DEL EVENTO, CON LO QUE SE 
+DEBE CANCELAR LA DIFERENCIA.
+
+El solicitante envía la solicitud, que es recibida por la concesionaria y puede ser revisada por la 
+APUSB, aunque es la concesionaria quien responde. En alguna parte debe decir que el envío de la 
+solicitud de alquiler implica que se han leído y aceptado los reglamentos, que se está de acuerdo 
+con los costos de alquiler, que se está en conocimiento de que se requiere el pago de la fianza con 
+cheque personal en los quince (15) días antes del evento, y de que se está en conocimiento de las 
+condiciones de la agencia de festejos para los servicios que se contraten.
+
+Una vez que la concesionaria confirma la disponibilidad de la fecha, se le envía un correo 
+electrónico al solicitante para que haga una pre-reserva (¿Puede ser un correo automático que se 
+active con un check in?). La pre-reserva le da al solicitante tres (3) días para que averigüe con la 
+concesionaria el costo del servicio; si en ese tiempo el solicitante no confirma la reserva, se anula 
+automáticamente su solicitud. Un solicitante solo puede hacer la pre-reserva en dos 
+oportunidades para un mismo evento y solo puede tener una pre-reserva activa.
+
+En cuanto el solicitante haya averiguado con la concesionaria el costo del servicio del festejo, la 
+concesionaria puede confirmar la reserva en la página; entonces, le llega un correo al solicitante 
+avisándole que puede confirmar la reserva y/o se le activa la posibilidad de confirmar la reserva y 
+comenzar los trámites de pago del alquiler del espacio. Este correo debe indicar que el pago solo 
+puede ser por transferencia o depósito bancario a la cuenta de la APUSB, y que la fianza se debe 
+pagar con cheque personal en los quince (15) días antes del evento.
+
+Una vez que el solicitante recibe el correo de confirmación, debe ingresar nuevamente en su 
+cuenta; el solicitante debe disponer de una forma de subir el archivo pdf de la 
+transferencia/depósito del pago del alquiler. Una vez realizado el pago total del alquiler, la fecha 
+queda reservada; sin embargo, debe aparecer un recordatorio sobre el pago de la diferencia de 
+alquiler en caso de que aumenten los precios hasta la fecha del evento, y del pago de la fianza, de 
+lo contrario quedará anulada la reserva; los pagos de alquiler y fianza deben estar completos 
+quince (15) días antes de la fecha del evento, de lo contrario la reserva quedará anulada.
+
+¿Hay forma de generar un correo cercano a la fecha del evento en caso de existir diferencia con el 
+costo del alquiler y para el pago de la fianza?
+
+Finalmente, una vez que la concesionaria haya verificado que no hubo daños a la Casa del Profesor 
+durante la realización del evento, se le envía un correo al solicitante para que pase a retirar su 
+cheque de fianza.

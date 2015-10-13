@@ -29,7 +29,6 @@ if(!empty($_POST))
 		$confirm_pass = trim($_POST["passwordc"]);
 	
 		//Perform some validation
-		//Feel free to edit / change as required
 		
 		if(minMaxRange(5,25,$username))
 		{

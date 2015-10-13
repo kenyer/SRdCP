@@ -23,7 +23,7 @@
 	//Generic website variables
 	//$websiteName = "Sistema de Reservas de la Casa del Profesor - APUSB";
 	$websiteName = "Sistema de Reservas de la Casa del Profesor";
-	$websiteUrl = "http://localhost/reservas/"; //including trailing slash
+	$websiteUrl = "http://localhost/SRdCP/"; //including trailing slash
 
 	//Do you wish UserPie to send out emails for confirmation of registration?
 	//We recommend this be set to true to prevent spam bots.
@@ -48,7 +48,7 @@
 	$default_replace = array($websiteName,$websiteUrl,$emailDate);
 	
 	//Display explicit error messages?
-	$debug_mode = false;
+	$debug_mode = true;
 
 	//Remember me - amount of time to remain logged in.
 	$remember_me_length = "1wk";

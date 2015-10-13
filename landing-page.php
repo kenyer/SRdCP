@@ -21,16 +21,16 @@
 <body>
 <?php require_once("navbar.php"); ?>
 
-
+<h3><center><?php echo $websiteName; ?> </center></h3>
+<p style="text-align:center">    
+<table width="1000" align=center>
+  <tr>
+    <td width="500"><?php include("fullcalendar/calendar.php"); ?></td>
+    <td><iframe src="http://localhost/SRdCP/galeria/" width="500" height="500" frameborder=0 scrolling="no"></iframe></td>
+  </tr>
+</table>
+</p>
 	<div id="content">
-		
-		<p style="text-align:center">      
-		<h3><center><?php echo $websiteName; ?> </center></h3>
-		</p>
-
-		<?php include("fullcalendar/calendar.php"); ?>
-            
-            <hr>
 			<p style="text-align:center">           
 				<a class="btn btn-large" href="login.php">
 					<?php echo lang("LOGIN"); ?>
@@ -41,12 +41,13 @@
 			</p>
             <br>
                 
-<p style="text-align:center">
-	<a href="forgot-password.php"><?php echo lang("FORGOT_PASSWORD"); ?></a> | 
-	<a href="resend-activation.php"><?php echo lang("RESEND_ACTIVATION_EMAIL"); ?></a></p>
+	  <p style="text-align:center">
+	    <a href="forgot-password.php"><?php echo lang("FORGOT_PASSWORD"); ?></a> | 
+	    <a href="resend-activation.php"><?php echo lang("RESEND_ACTIVATION_EMAIL"); ?></a>
+	  </p>
      
             <div class="clear"></div>
-</div>
+    </div>
 
 </body>
 </html>
