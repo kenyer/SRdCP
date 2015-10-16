@@ -1,6 +1,8 @@
 PENDIENTES
+- Completar el registro con tooooodos los campos, incluye actualizar la tabla userpie_users
 - Se deben centralizar las sentencias SQL para abrir y cerrar las conexiones en un solo lugar
 - Tdoos los formularios deben tener su vista y su controlador.
+- Hacer un panel para gestionar las fotos y los textos de la galeria
 - Actualizar perfil debería tener no solo el cambiar correo sino nombre, apellido y nombre de usuario
 - Traducir el Bienvenido en navbar
 - En los formularios hay que poner un poco más de padding a los campos

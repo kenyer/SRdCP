@@ -4,13 +4,9 @@
 		http://userpie.com
 	*/
 	require_once("models/config.php");
-	
 	//Prevent the user visiting the logged in page if he/she is already logged in
 	if(isUserLoggedIn()) { header("Location: index.php"); die(); }
-?>
 
-
-<?php
 	/* 
 		Below is a very simple example of how to process a new user.
 		 Some simple validation (ideally more is needed).
@@ -126,15 +122,18 @@ if(!empty($_POST))
 						<label><?php echo lang("EMAIL"); ?>:
 						<input type="text" name="email" /></label>
 				 
+						<label><?php echo lang("CEL"); ?>:
+						<input type="text" name="celphone" /></label>
+
+				 
 						<label><?php echo lang("USER_TYPE"); ?>:
 						<select name="type">
 							<option value"0">--Seleccione--</option>
 							<option value"1"><?php echo lang("USB_MEMBER"); ?></option>
-							<option value"2"><?php echo lang("USB_MEMBER_PARENT"); ?></option>
-							<option value"3"><?php echo lang("OTHER"); ?></option>
+							<option value"2"><?php echo lang("NO_USB_MEMBER"); ?></option>							
 						</select> </label>
 						
-						<hr> <small>Solo para miembros USB</small>
+						<b><small>Solo para miembros de la comunidad Académica USB</small></b>
 						<label><?php echo lang("DEPARTMENT"); ?>:
 						<select name="dpto">
 							<option value"0">--Seleccione--</option>
@@ -149,22 +148,12 @@ if(!empty($_POST))
 						<label>Correo USB:
 						<input type="text" name="usb-email" />	</label>	
 
-						<hr> <small>Solo para referidos</small>
-						<label>Correo USB del referido:
-						<input type="text" name="usb-email-referido" />	</label>
+						<b><small>Solo para NO miembros de la comunidad Académica USB</small></b>
+						<label>Nombre de la empresa (si aplica):
+						<input type="text" name="empresa" />	</label>
 
-						<label>Parentezco:											
-						<select name="parentezco">
-							<option value"0">--Seleccione--</option>
-							<option value"1">Padre o madre</option>
-							<option value"2">Hijo(a)</option>
-							<option value"3">Hermano(a)</option>
-						</select> 	</label>
-						
-						<hr> <small>Solo para usuarios del tipo "Otro"</small>
-						<label>¿Cómo se enteró de este servicio?:
-						<input type="text" name="fuente" />	</label>					
-		
+						<label>¿Cómo se enteró de nuestros servicios?:
+						<input type="text" name="fuente" />	</label>
 					</p>                
 				</div>           
 		</div>
@@ -176,11 +165,11 @@ if(!empty($_POST))
 	</form>
             </div>
 
-			<div class="clear"></div>
-            <p style="margin-top:30px; text-align:center;">
-				<a href="login.php"><?php echo lang("LOGIN"); ?></a> / 
-				<a href="forgot-password.php"><?php echo lang("FORGOT_PASSWORD"); ?></a> / 
-				<a href="<?php echo $websiteUrl; ?>"><?php echo lang("HOME"); ?></a></p>
+	    <div class="clear"></div>
+	  <?php 
+	    $tipo=3;
+	    include("footer.php");
+	    ?>			
 
 </body>
 </html>

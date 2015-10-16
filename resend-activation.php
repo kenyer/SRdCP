@@ -133,76 +133,54 @@ if(!empty($_POST) && $emailActivation)
  
     <?php
     if(!empty($_POST) || !empty($_GET["confirm"]) || !empty($_GET["deny"]) && $emailActivation)
-    {     
-	
-			if(count($errors) > 0)
-            {
-		?>
-        	<div id="errors">
+    {     	
+      if(count($errors) > 0)
+      {
+      ?>
+	  <div id="errors">
             	<?php errorBlock($errors); ?>
-            </div> 
-        <?
-            }
-			else
-			{
+	  </div> 
+      <?php
+      }
+      else
+      {
 		?>
             <div id="success">
             
                 <p><?php echo $success_message; ?></p>
             
             </div>
-        <?
-			}
-        }
-        ?> 
-    
-	
-	<?php 
-    
+        <?php
+      }
+    }    
     if(!$emailActivation)
     { 
         echo lang("FEATURE_DISABLED");
     }
-	else
-	{
-    ?>
+    else
+    {
+	?>
         <form name="resendActivation" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
-        
-        
-        <p>
-            <label><?php echo lang("USERNAME"); ?>:</label>
-            <input type="text" name="username" />
-        </p>     
-            
-         <p>
-            <label><?php echo lang("EMAIL"); ?>:</label>
-            <input type="text" name="email" />
-         </p>    
-    
-    <p><input type="submit" class="btn btn-primary btn-large" name="activate" id="newfeedform" value="Resend" /></p>
-
-            
+	  <p>
+	      <label><?php echo lang("USERNAME"); ?>:</label>
+	      <input type="text" name="username" />
+	  </p>                 
+	  <p>
+	      <label><?php echo lang("EMAIL"); ?>:</label>
+	      <input type="text" name="email" />
+	  </p>    
+	  <p><input type="submit" class="btn btn-primary btn-large" name="activate" id="newfeedform" value="Resend" /></p>  
         </form>
 
-	 <? } ?> 
-	       </div>           
-      </div>
-
-
-  
-  
-                
-                </form>
-            </div>
-
-			<div class="clear"></div>
-            <p style="margin-top:30px; text-align:center;">
-				<a href="register.php"><?php echo lang("SIGN_UP"); ?></a> / 
-				<a href="login.php"><?php echo lang("LOGIN"); ?></a> / 
-				<a href="forgot-password.php"><?php echo lang("FORGOT_PASSWORD"); ?></a> / 
-				<a href="<?php echo $websiteUrl; ?>"><?php echo lang("HOME"); ?></a></p>
+	  <?php 
+     } ?> 
+  </div>           
+</div>
+<div class="clear"></div>
+	<?php 
+	  $tipo=5;
+	  include("footer.php");
+	  ?>
 
 </body>
 </html>
-
-

@@ -39,7 +39,7 @@
             
 	</div>
 	
-	<?php require_once("footer.php"); ?>
+	<?php $tipo=2; require_once("footer.php"); ?>
 </body>
 </html>
 

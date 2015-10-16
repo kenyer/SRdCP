@@ -82,11 +82,11 @@
 		"NOT_AUTHORIZED"						=> "You are not authorized to view this page",
 		"NAME"									=> "Name",	
 		"LASTNAME"								=> "Lastname",	
-
+		"CEL"								=> "Celular Phone",	
 //For USB
 		"USER_TYPE"								=> "User Type",	
 		"USB_MEMBER"							=> "Academic USB Member",
-		"USB_MEMBER_PARENT"						=> "Parent of an academic USB Member",
+		"NO_USB_MEMBER"						=> "No Academic USB Member",
 		"OTHER"									=> "Other",
 		"DEPARTMENT"							=> "Deparment",
 

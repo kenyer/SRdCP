@@ -2,8 +2,6 @@
 	/*
 		UserPie Version: 1.0 Updated by: Kenyer Domínguez
 		http://userpie.com
-		
-
 	*/
 	require_once("models/config.php");
 	
@@ -103,80 +101,58 @@ if(!empty($_POST))
 <title><?php echo lang("SIGN_IN"); ?> | <?php echo $websiteName; ?> </title>
 <?php require_once("head_inc.php"); ?>
 </head>
+<?php require_once("navbar.php"); ?>
 <body>
-
 <div class="modal-ish">
   <div class="modal-header">
-<h2><?php echo lang("SIGN_IN"); ?></h2>
+    <h2><?php echo lang("SIGN_IN"); ?></h2>
   </div>
   <div class="modal-body">
- 
-
-               
+           
         <?php
         if(!empty($_POST))
         {
-        ?>
-        <?php
-        if(count($errors) > 0)
-        {
-        ?>
-        <div id="errors">
-        <?php errorBlock($errors); ?>
-        </div>     
-        <?php
-        } }
-        ?> 
-        
-        <?php if(($_GET['status']) == "success") 
-        {
-        
-        echo "<p>Your account was created successfully. Please login.</p>";
-        
+	    if(count($errors) > 0)
+	    {
+		?>
+		<div id="errors">
+		<?php errorBlock($errors); ?>
+		</div>     
+		<?php
+	    } 
+        }
+        if( isset($_GET['status']) and ($_GET['status']) == "success") 
+        {        
+	    echo "<p>Your account was created successfully. Please login.</p>";        
     	}
-    	?>
-        
-        
-                <form name="newUser" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+    	?>      
+	<form name="newUser" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
                 <p>
                     <label><?php echo lang("USERNAME"); ?>:</label>
                     <input type="text"  name="username" />
                 </p>
-                
+        
                 <p>
                      <label><?php echo lang("PASSWORD"); ?>:</label>
                      <input type="password" name="password" />
                 </p>
                 
- <p>
+		<p>
 		     <label><input type="checkbox" name="remember_me" value="1" />	
                      <small><?php echo lang("REMEMBER_ME"); ?></small></label>
                 </p>                
 
-	
-                          
-
-                          </div>
-
-            
- <div class="modal-footer">
-<input type="submit" class="btn btn-primary" name="new" id="newfeedform" value="<?php echo lang("SIGN_IN"); ?>" />
-  </div>
-  
-</div>
-
-                </form>
-                
-        
-            <div class="clear"></div>
-
-<p style="margin-top:30px; text-align:center;">
-	<a href="register.php"><?php echo lang("SIGN_UP"); ?></a> / 
-	<a href="forgot-password.php"><?php echo lang("FORGOT_PASSWORD"); ?></a> / 
-	<a href="<?php echo $websiteUrl; ?>"><?php echo lang("HOME"); ?></a></p>
-
-            
-      
+		</div>
+		<div class="modal-footer">
+		  <input type="submit" class="btn btn-primary" name="new" id="newfeedform" value="<?php echo lang("SIGN_IN"); ?>" />
+		</div>
+		</div>
+	</form>
+        <div class="clear"></div>
+	<?php 
+	  $tipo=1;
+	  include("footer.php");
+	  ?>
 </body>
 </html>
 

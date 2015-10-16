@@ -5,28 +5,31 @@ Sin necesidad de iniciar sesión se puede revisar:
 
 LISTO 1) Disponibilidad de fecha de los espacios (podría ser un calendario con los días ocupados marcados).
 
-2) Fotos de los espacios disponibles, con su capacidad, y de los servicios de festejos de la concesionaria, pero sin costos. 
+LISTO 2) Fotos de los espacios disponibles, con su capacidad, y de los servicios de festejos de la concesionaria, pero sin costos. 
 
 De estar interesado y estar disponible la fecha, debe registrarse (únicamente un login y un 
 password) e iniciar sesión; habrá dos formas de registro, una para profesores y otra para personas 
 externas a la USB (incluyendo compañías).
 
 Si se registra como profesor, se necesitan los siguientes datos:
-Departamento
-Número de celular
-Extensión
-Tipo de evento
-Fecha del evento
-Número de asistentes
-Área que desea alquilar
+CASI LISTO (DEBERIA SER UNA TABLA EN LA BD) Departamento
+LISTO Número de celular
+LISTO Extensión
+ESTO VA EN LA SOLICITUD* Tipo de evento
+ESTO VA EN LA SOLICITUD* Fecha del evento
+ESTO VA EN LA SOLICITUD* Número de asistentes
+ESTO VA EN LA SOLICITUD* Área que desea alquilar
 
 Si se registra como externo (persona natural o jurídica), se necesitan los siguientes datos:
 Nombre/Compañía
-Número de celuLar
-Tipo de evento
-Fecha del evento
-Número de asistentes
-Área que desea alquilar
+LISTO Número de celuLar
+ESTO VA EN LA SOLICITUD* Tipo de evento
+ESTO VA EN LA SOLICITUD* Fecha del evento
+ESTO VA EN LA SOLICITUD* Número de asistentes
+ESTO VA EN LA SOLICITUD* Área que desea alquilar
+* Debe ir en la solicitu porque un usuario puede hacer más de una solicitud. Si se coloca en el registro, 
+implica que se debe registrar cada vez que quiera hacer una solicitud, lo cual es incomodo
+
 
 En cada una de estas páginas deben aparecer los links al reglamento de alquiler, a los costos de 
 alquiler, de la fianza y las condiciones de pago, y a la información de la agencia de festejos. FALTA 

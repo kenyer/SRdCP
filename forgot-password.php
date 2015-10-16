@@ -1,16 +1,12 @@
-<?php
+<?php 
 	/*
 		UserPie Version: 1.0 Updated by: Kenyer Domínguez
 		http://userpie.com
-		
-
 	*/
 	require_once("models/config.php");
 	
 	//Prevent the user visiting the lost password page if he/she is already logged in
 	if(isUserLoggedIn()) { header("Location: account.php"); die(); }
-?>
-<?php
 	/* 
 		Below is a very simple example of how to process a lost password request
 		We'll deal with a request in two stages, confirmation or deny then proccess
@@ -26,7 +22,7 @@ $errors = array();
 $success_message = "";
 	
 //User has confirmed they want their password changed
-//----------------------------------------------------------------------------------------------
+
 if(!empty($_GET["confirm"]))
 {
 	$token = trim($_GET["confirm"]);
@@ -78,9 +74,7 @@ if(!empty($_GET["confirm"]))
 			
 	}
 }
-
 //----------------------------------------------------------------------------------------------
-
 //User has denied this request
 //----------------------------------------------------------------------------------------------
 if(!empty($_GET["deny"]))
@@ -101,13 +95,7 @@ if(!empty($_GET["deny"]))
 		$success_message = lang("FORGOTPASS_REQUEST_CANNED");
 	}
 }
-
-
-
-
 //----------------------------------------------------------------------------------------------
-
-
 //Forms posted
 //----------------------------------------------------------------------------------------------
 if(!empty($_POST))
@@ -195,6 +183,7 @@ if(!empty($_POST))
 			}
 		}
 }	
+
 //----------------------------------------------------------------------------------------------	
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -204,72 +193,56 @@ if(!empty($_POST))
 <title>Forgot password | <?php echo $websiteName; ?> </title>
 <?php require_once("head_inc.php"); ?>
 </head>
+<?php require_once("navbar.php"); ?>
 <body>
 <div class="modal-ish">
   <div class="modal-header">
         <h2><?php echo lang("RESET_PASSWORD"); ?></h2>
   </div>
   <div class="modal-body">
-        
         <br>
-        
-		<?php
+      <?php 
         if(!empty($_POST) || !empty($_GET))
         {
             if(count($errors) > 0)
             {
 		?>
         	<div id="errors">
-            	<?php errorBlock($errors); ?>
-            </div> 
-        <?
+		    <?php errorBlock($errors); ?>
+		</div> 
+		<?php|
             }
-			else
-			{
+	    else
+	    {
 		?>
-            <div id="success">
-            
-                <p><?php echo $success_message; ?></p>
-            
-            </div>
-        <?
-			}
-        }
-        ?> 
-        
+		<div id="success">
+		  <p><?php echo $success_message; ?></p>
+		</div>
+		<?php
+	    }
+        } 
+        ?>         
         <div id="regbox">
-            <form name="newLostPass" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
-            
-            <p>
-                <label><?php echo lang("USERNAME"); ?>:</label>
-                <input type="text" name="username" />
-            </p>
-            
-            
-            <p>    
-                <label><?php echo lang("EMAIL"); ?>:</label>
-                <input type="text" name="email" />
-            </p>
-            
-        </div>
-        </div>    
-            
- <div class="modal-footer">
-<input type="submit" class="btn btn-primary" name="new" id="newfeedform" value="<?php echo lang("RESET_PASSWORD"); ?>" />
-</div>
+            <form name="newLostPass" action="<?php //echo $_SERVER['PHP_SELF'] ?>" method="post"> 
+	      <p>
+		  <label><?php echo lang("USERNAME"); ?>:</label>
+		  <input type="text" name="username" />
+	      </p>
+	      <p>    
+		  <label><?php echo lang("EMAIL"); ?>:</label>
+		  <input type="text" name="email" />
+	      </p>            
+		<div class="modal-footer">
+		  <input type="submit" class="btn btn-primary" name="new" id="newfeedform" value="<?php echo lang("RESET_PASSWORD"); ?>" />
+		</div>
                 
                 </form>
             </div>
 
-			<div class="clear"></div>
-            <p style="margin-top:30px; text-align:center;">
-				<a href="register.php"><?php echo lang("SIGN_UP"); ?></a> / 
-				<a href="login.php"><?php echo lang("LOGIN"); ?></a> / 
-				<a href="<?php echo $websiteUrl; ?>"><?php echo lang("HOME"); ?></a></p>
-				
-				
-            <div class="clear"></div>
+		    <div class="clear"></div>
+	<?php 
+	  $tipo=4;
+	  include("footer.php");
+	   ?>
 </body>
 </html>
-
-

@@ -1,16 +1,13 @@
 <?php 
-
 	/*
 		UserPie Version: 1.0 Updated by: Kenyer Domínguez
 		http://usercake.com
 	*/
-	
 ?>	 
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container clearfix">
-				
-					<?php if(isUserLoggedIn()) { ?>
+				<?php if(isUserLoggedIn()) { ?>
 				<ul class="nav pull-left">		
 					<a class="brand" id="logo" href="<?php echo $websiteUrl; ?>"><?php echo lang("HOME"); ?></a>
 				</ul>

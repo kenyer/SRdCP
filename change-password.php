@@ -2,16 +2,11 @@
 	/*
 		UserPie Version: 1.0 Updated by: Kenyer Domínguez
 		http://usercake.com
-		
-
 	*/
 	include("models/config.php");
-	
 	//Prevent the user visiting the logged in page if he/she is not logged in
 	if(!isUserLoggedIn()) { header("Location: login.php"); die(); }
-?>
 
-<?php
 	/* 
 		Below is a very simple example of how to process a login request.
 		Some simple validation (ideally more is needed).
@@ -78,64 +73,53 @@ if(!empty($_POST))
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Update Password | <?php echo $websiteName; ?> </title>
 <?php require_once("head_inc.php"); ?>
-
 </head>
 <body>
-<?php require_once("navbar.php"); ?>
+  <?php require_once("navbar.php"); ?>
 
 <div id="content">
-<div class="modal-ish">
-  <div class="modal-body">
-
-		<?php
-            if(!empty($_POST))
-            {
-				if(count($errors) > 0)
-				{
-            ?>
-            <div id="errors">
-            <?php errorBlock($errors); ?>
-            </div>     
-            <?php } else { ?> 
-            <div id="success">
-               <p><?php echo lang("ACCOUNT_DETAILS_UPDATED"); ?></p>
-            </div>
-        <? } }?>
-
-		
-
-            <form name="changePass" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
-            
-                <p>
-                    <label><?php echo lang("ACTUAL_PASSWORD"); ?>:</label>
-                    <input type="password" name="password" />
-                </p>
-                
-                <p>
-                    <label><?php echo lang("NEW_PASSWORD"); ?>:</label>
-                    <input type="password" name="passwordc" />
-                </p>
-                
-                <p>
-                    <label><?php echo lang("CONFIRM_PASSWORD"); ?>:</label>
-                    <input type="password" name="passwordcheck" />
-                </p>
-            </div>    
-
-
-  <div class="modal-footer">
-<input type="submit" class="btn btn-primary" name="new" id="newfeedform" value="<?php echo lang("UPDATE"); ?>" />
-  </div>
-
-  
-</div>
-
-                </form>
-                
-        
-            <div class="clear"></div>
-
-  <?php require_once("footer.php"); ?>
+  <div class="modal-ish">
+    <div class="modal-body">
+	      <?php
+	      if(!empty($_POST))
+	      {
+		  if(count($errors) > 0)
+		  {
+		  ?>
+		    <div id="errors">
+		      <?php errorBlock($errors); ?>
+		    </div>     
+		    <?php 
+		  } 
+		  else 
+		  { ?> 
+		      <div id="success">
+			<p><?php echo lang("ACCOUNT_DETAILS_UPDATED"); ?></p>
+		      </div>
+		      <?php 
+		  } 
+	      }?>
+	      <form name="changePass" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+		  <p>
+		      <label><?php echo lang("ACTUAL_PASSWORD"); ?>:</label>
+		      <input type="password" name="password" />
+		  </p>
+		  <p>
+		      <label><?php echo lang("NEW_PASSWORD"); ?>:</label>
+		      <input type="password" name="passwordc" />
+		  </p>
+		  <p>
+		      <label><?php echo lang("CONFIRM_PASSWORD"); ?>:</label>
+		      <input type="password" name="passwordcheck" />
+		  </p>
+		  <div class="modal-footer">
+		    <input type="submit" class="btn btn-primary" name="new" id="newfeedform" value="<?php echo lang("UPDATE"); ?>" />
+		  </div>
+	      </form>
+      </div>
+      <div class="clear"></div>
+    </div>  
+    <?php $tipo=2; require_once("footer.php"); ?>
 </div>  
 </body>
 </html>

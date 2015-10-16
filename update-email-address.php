@@ -103,7 +103,7 @@ if(!empty($_POST))
             
             <div class="clear"></div>
             
-              <?php require_once("footer.php"); ?>
+              <?php $tipo=2; require_once("footer.php"); ?>
 </div>
 </body>
 </html>

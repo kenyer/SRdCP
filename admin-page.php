@@ -17,27 +17,21 @@
 <?php require_once("head_inc.php"); ?>
 </head>
 <body>
-<?php require_once("navbar.php"); ?>
+  <?php require_once("navbar.php"); ?>
 	<div id="content">
-    
+	    <h1>Welcome</h1>
         
-<h1>Welcome</h1>
-        
-        	<p>Welcome to your account page <strong><?php echo $loggedInUser->display_username; ?></strong></p>
+	    <p>Welcome to your account page <strong><?php echo $loggedInUser->display_username; ?></strong></p>
 
             <p>You are a <strong><?php  $group = $loggedInUser->groupID(); echo $group['group_name']; ?></strong></p>
             
             <p>You joined on <?php echo date("l \\t\h\e jS Y",$loggedInUser->signupTimeStamp()); ?> </p>
 
-			<p>This page doesn't really do anything special. It's up to you to create something interesting and useful based on the framework we have provided.</p>
+	    <p>This page doesn't really do anything special. It's up to you to create something interesting and useful based on the framework we have provided.</p>
 			
             <p>Using UserPie you can build just about anything: a blog, content management system, discussion forum, social network...</p>
-            
-
-            
-	</div>
-	
-	<?php require_once("footer.php"); ?>
+	</div>	
+	<?php $tipo=2; require_once("footer.php"); ?>
 </body>
 </html>
 

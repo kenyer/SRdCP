@@ -7,10 +7,6 @@
 	
 	//Prevent the user visiting the logged in page if he/she is already logged in
 		if (!isset($loggedInUser)) header('Location: login.php');
-?>
-
-
-<?php
 	/* 
 		Below is a very simple example of how to process a new event.
 		 Some simple validation (ideally more is needed).
@@ -169,10 +165,6 @@ if(!empty($_POST))
             </div>
 
 			<div class="clear"></div>
-            <p style="margin-top:30px; text-align:center;">
-				<a href="login.php"><?php echo lang("LOGIN"); ?></a> / 
-				<a href="forgot-password.php"><?php echo lang("FORGOT_PASSWORD"); ?></a> / 
-				<a href="<?php echo $websiteUrl; ?>"><?php echo lang("HOME"); ?></a></p>
-
+	<?php $tipo=2; require_once("footer.php"); ?>
 </body>
 </html>

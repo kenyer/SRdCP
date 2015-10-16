@@ -3,7 +3,7 @@
 		UserPie Version: 1.0 Updated by: Kenyer Domínguez
 		http://userpie.com
 	*/
-
+	
 	if(is_dir("install/"))
 	{
 		header("Location: install/");

@@ -13,7 +13,7 @@
 	
 	//Account
 	$lang = array_merge($lang,array(
-		"ACCOUNT_SPECIFY_USERNAME" 				=> "Por favor introduzca su nombre de usuario",
+		"ACCOUNT_SPECIFY_USERNAME" 			=> "Por favor introduzca su nombre de usuario",
 		"ACCOUNT_SPECIFY_PASSWORD" 				=> "Por favor introduzca su constraseña",
 		"ACCOUNT_SPECIFY_EMAIL"					=> "Por favor introduzca su correo electrónico",
 		"ACCOUNT_INVALID_EMAIL"					=> "Correo Electrónico inválido",
@@ -82,10 +82,11 @@
 		"NOT_AUTHORIZED"						=> "Usted no está autorizado para ver esta página",
 		"NAME"									=> "Nombre",	
 		"LASTNAME"								=> "Apellido",	
+		"CEL"								=> "Tlf. Celular",	
 //PARA LA USB		
 		"USER_TYPE"								=> "Tipo de usuario",	
 		"USB_MEMBER"							=> "Miembro de la Comunidad Académica de la USB",
-		"USB_MEMBER_PARENT"						=> "Referido por un miembro de la Comunidad Académica de la USB",
+		"NO_USB_MEMBER"							=> "No miembro de la Comunidad Académica de la USB",
 		"OTHER"									=> "Otro",
 		"DEPARTMENT"							=> "Departamento",
 	));
